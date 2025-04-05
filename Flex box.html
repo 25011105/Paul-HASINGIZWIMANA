@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Flexbox with Minimize</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            border: 2px solid black;
+            padding: 20px;
+        }
+
+        .item {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+            width: 80px;
+            text-align: center;
+            border: 2px solid #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox with Minimize Option</h1>
+    
+    <button onclick="toggleItems()">Minimize/Maximize Items</button>
+    
+    <div class="container" id="flexContainer">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+        <div class="item">Item 9</div>
+        <div class="item">Item 10</div>
+    </div>
+
+    <script>
+        function toggleItems() {
+            var items = document.querySelectorAll('.item');
+            items.forEach(function(item) {
+                item.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
