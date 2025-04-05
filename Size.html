@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Text Size</title>
+</head>
+<body>
+    <h1 id="helloText">Hello World</h1>
+    <select id="fontSize">
+        <option value="20px">Small</option>
+        <option value="40px">Medium</option>
+        <option value="60px">Large</option>
+    </select>
+
+    <script>
+        document.getElementById('fontSize').onchange = function() {
+            document.getElementById('helloText').style.fontSize = this.value;
+        }
+    </script>
+</body>
+</html>
