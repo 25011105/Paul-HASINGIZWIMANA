@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Text Color</title>
+</head>
+<body>
+    <h1 id="helloText">Hello World</h1>
+    <select id="textColor">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <script>
+        document.getElementById('textColor').onchange = function() {
+            document.getElementById('helloText').style.color = this.value;
+        }
+    </script>
+</body>
+</html>
